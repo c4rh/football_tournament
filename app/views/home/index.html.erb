@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+<%= current_user.name %>
+<%= current_user.email %>
+<%= image_tag current_user.image unless current_user.image.blank? %> 
+
+<% end %>
+<%= link_to 'Sign out', '/users/sign_out', :method => :delete %>
